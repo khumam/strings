@@ -11,7 +11,7 @@ class Strings
      * @param  mixed $patern
      * @return string
      */
-    public function clean(string $string, string $patern = '/[^a-z0-9\.]/i',): string
+    public static function clean(string $string, string $patern = '/[^a-z0-9\.]/i',): string
     {
         return preg_replace($patern, '', $string);
     }
@@ -22,7 +22,7 @@ class Strings
      * @param  mixed $string
      * @return string
      */
-    public function lower(string $string): string
+    public static function lower(string $string): string
     {
         return strtolower($string);
     }
@@ -33,7 +33,7 @@ class Strings
      * @param  mixed $string
      * @return string
      */
-    public function upper(string $string): string
+    public static function upper(string $string): string
     {
         return strtoupper($string);
     }
@@ -44,7 +44,7 @@ class Strings
      * @param  mixed $string
      * @return string
      */
-    public function length(string $string): string|int
+    public static function length(string $string): string|int
     {
         return strlen($string);
     }
@@ -55,7 +55,7 @@ class Strings
      * @param  mixed $text
      * @return string
      */
-    public function wordLength(string $text): string|int
+    public static function wordLength(string $text): string|int
     {
         return str_word_count($text);
     }
@@ -66,7 +66,7 @@ class Strings
      * @param  mixed $string
      * @return bool
      */
-    public function isContainNumber(string $string): bool
+    public static function isContainNumber(string $string): bool
     {
         return preg_match('~[0-9]+~', $string) ? true : false;
     }
